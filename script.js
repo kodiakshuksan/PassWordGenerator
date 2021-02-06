@@ -30,11 +30,10 @@ console.log('Instructions-Must Choose length of password from 8-128. Must includ
 
 
 //alert for choose length
-var box1 = window.prompt('Pick amount of characters you would like in your password from 8-128.');
+var lengthOfPassword = window.prompt('Pick amount of characters you would like in your password from 8-128.');
 console.log('Pick amount of characters you would like in your password from 8-128. ')
-console.log(box1)
 //how do I get value of this back?
-
+console.log(lengthOfPassword)
 //prompt for include number yes or no
 var box2 = window.confirm('Do you want to include a number?');
 console.log('Do you want to include a number?')
@@ -73,15 +72,13 @@ console.log(box5)
 
 //length of password
 
-var numberofchars = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128"];
-console.log(numberofchars)
-console.log(numberofchars.length)
-var lengthofpassword = numberofchars.length;
-console.log(lengthofpassword) 
-console.log(box1)
+// var numberofchars = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128"];
+// console.log(numberofchars)
+// console.log(numberofchars.length)
+// var lengthofpassword = numberofchars.length;
+// console.log(lengthofpassword) 
 
-lengthofpassword = box1;
-console.log(lengthofpassword)
+
 
 if (box2 === true) {
   var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -90,7 +87,12 @@ if (box2 === true) {
   var choiceNumber = number[randomNumber4];
   console.log(choiceNumber)
   box2 = choiceNumber
-  included.push("choiceNumber")
+  included.push(choiceNumber)
+};
+
+if (!box2) {
+  window.open('Must choose a Number!')
+  console.log('Must choose a Number!');
 };
 
 console.log(included)
@@ -102,8 +104,7 @@ if (box3 === true) {
   console.log(lowercase[randomNumber2])
   var choiceLowercase = (lowercase[randomNumber2]);
   console.log(choiceLowercase)
-  box3 = choiceLowercase
-  included.push("choiceLowercase")
+  included.push(choiceLowercase)
   console.log(choiceLowercase)
   console.log(included)
 };
@@ -115,8 +116,7 @@ if (box4 === true) {
   var randomNumber3 = Math.floor(Math.random() * 26)
   console.log(uppercase[randomNumber3])
   var choiceUppercase = (uppercase[randomNumber3]);
-  box4 = choiceUppercase
-  included.push("choiceUppercase")
+  included.push(choiceUppercase)
   console.log(choiceUppercase)
 };
 
@@ -130,17 +130,9 @@ if (box5 === true) {
   console.log(randomNumber1)
   var choiceSymbols = (symbols[randomNumber1]);
   console.log(choiceSymbols)
-  box5 = choiceSymbols
-  included.push("choiceSymbols")
+  included.push(choiceSymbols)
 };
 
-
-console.log(choiceNumber)
-
-
-
-console.log(included) 
-console.log(choiceLowercase)
 
 
 //bringing value to box2, box3, box4, box5
@@ -148,7 +140,11 @@ console.log(choiceLowercase)
 // var box3 = choiceLowercase; figuring out where to place this
 // console.log(box3)
 
-console.log(included)
+console.log(included.join(""))
+var passwordNoLength = (included.join(""));
+console.log(passwordNoLength)
+
+
 
 
 
@@ -254,11 +250,23 @@ console.log(randomNumber1)
 var choiceSymbols = (symbols[randomNumber1]);
 console.log(choiceSymbols)
 
-  
+console.log(lengthOfPassword)
+
+console.log(passwordNoLength)
+
+
+//var makeNewPassword = 10=passwordNolength choices running over and over until it reaches 10
+//window.alert(makeNewPassword)
 
 
 
 
+// if user picks no lc, uc, or symbols
+//window.alert(must choose lc, uc, or symbols)
+//window.alert(run box3 through 5 again)
+
+//last button of box 5 for symbols will generate new password if
+//all criteria is true
 
 
 
@@ -312,3 +320,44 @@ console.log(choiceSymbols)
 //WHEN the password is generated
 //THEN the password is either displayed in an alert or written to the page//
 
+//alert for choose length
+var lengthOfPassword = window.prompt('Pick amount of characters you would like in your password from 8-128.');
+console.log('Pick amount of characters you would like in your password from 8-128. ')
+//how do I get value of this back?
+console.log(lengthOfPassword)
+//prompt for include number yes or no
+var box2 = window.confirm('Do you want to include a number?');
+console.log('Do you want to include a number?')
+console.log(box2)
+
+var noNumberAlert = !box2 (
+  window.alert('Must choose a Number!')
+);
+
+window.confirm('Do you want to include a number?');
+
+
+//prompt for include lowercase yes or no
+var box3 = window.confirm('Do you want to include a lowercase letter?');
+console.log('Do you want to include a lowercase letter?')
+console.log(box3)
+
+//prompt for include uppercase yes or no
+var box4 = window.confirm('Do you want to include an uppercase letter?');
+console.log('Do you want to include an uppercase letter?')
+console.log(box4)
+
+var chooseAgain = !box3;
+var tryAgain =!box4 == chooseAgain;
+var doOver =!box5 == tryAgain;
+
+
+doOver = (
+  window.prompt('Must include at least ONE lowercase letter, uppercase letter, or symbol ')
+);
+
+//prompt for include symbol
+var included = new Array();
+var box5 = window.confirm('Do you want to include a special character?');
+console.log('Do you want to include a special character?')
+console.log(box5)
