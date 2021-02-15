@@ -25,3 +25,4 @@ getting ready to apply alerts, prompts, confirms
 password array for temp.
 
 ## Contributors 
+https://stackoverflow.com/questions/10952615/how-can-i-find-the-length-of-a-number
