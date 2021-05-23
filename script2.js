@@ -175,7 +175,16 @@ var text = "";
 var i;
 for (i = 0; i < included.length; i++) {
   text += included[i];
+  console.log(i)
 }
+
+// for (let i = 0; i < included.length; i++) {
+//     text += included[i]}
+//text = [randoms];
+//var randoms = Array(goal).fill(0).map(included);
+  
+//console.log(randoms)
+console.log(goal)
 console.log(text)
 document.getElementById("password").innerHTML = text;
 
@@ -186,8 +195,7 @@ document.getElementById("password").innerHTML = text;
 
 
 
-
-//document.getElementById("generate").addEventListener("click", inclu//);
+//document.getElementById("generate").addEventListener("click", included//);
 
 
 

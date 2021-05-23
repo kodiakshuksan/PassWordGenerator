@@ -9,6 +9,9 @@ This is basic Javascript password generator program. It generates a new password
 
 ## Project Image
 
+![transactions](code.png)
+![transactions](pass.png)
+
 
 ## Technologies 
 For this project I used Visual Studio Code, HTML, CSS, and Javascript.
