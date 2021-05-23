@@ -168,6 +168,16 @@ if (questionBox2 === true) {
 
 };
 console.log(included)
+console.log(lengthOfPassword)
+const goal = lengthOfPassword;
+console.log(goal)
+var text = "";
+var i;
+for (i = 0; i < included.length; i++) {
+  text += included[i];
+}
+console.log(text)
+document.getElementById("password").innerHTML = text;
 
 // work on length of password 
 // make password
@@ -177,7 +187,7 @@ console.log(included)
 
 
 
-
+//document.getElementById("generate").addEventListener("click", inclu//);
 
 
 
