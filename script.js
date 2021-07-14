@@ -3,11 +3,15 @@
 //testing connection
 console.log("Hello Wild!")
 
+
 //This function runs when red button is pressed and starts questions to formulate new password.
 function generatePassword() {
 
+//clears old password
+document.getElementById("password").value = "Your Secure Password";
+
 //alert pop-up box with instructions and rules for your new password.
-window.alert('Instructions-Must Choose length of password from 8-128. Must include at least a number, lowercase letter, uppercase letter, and symbol. Okay is yes to inclue and cancel means not to include')
+window.alert('Instructions-Must Choose length of password from 8-128. Must include at least a number, lowercase letter, uppercase letter, and symbol. Okay is yes to include and cancel means not to include')
 console.log('Instructions-Must Choose length of password from 8-128. Must include at least a number, lowercase letter, uppercase letter, and symbol. Okay is yes to include and cancel means not to include ')
 
 //alert for choosing PASSWORD LENGTH
@@ -15,11 +19,6 @@ var lengthOfPassword = window.prompt('Pick amount of characters you would like i
 var numbersInPassword = console.log('Pick amount of characters you would like in your password from 8-128. ')
 //how do I get value of this back?
 console.log(lengthOfPassword)
-
-//prompt for Must Include a Number
-var questionBox2 = window.confirm('Must include a number!');
-console.log('Must include a number?')
-console.log(questionBox2);
 
 //prompt for choosing to include LOWERCASE LETTER
 var questionBox3 = window.confirm('Do you want to include a lowercase letter?');
@@ -31,7 +30,7 @@ var questionBox4 = window.confirm('Do you want to include an uppercase letter?')
 console.log('Do you want to include an uppercase letter?')
 var includeUpperCase = console.log(questionBox4);
 
-// //prompt for choosing SYMBOL
+//prompt for choosing SYMBOL
 var questionBox5 = window.confirm('Do you want to include a special character?');
 console.log('Do you want to include a special character?')
 var includeSymbol = console.log(questionBox5);
@@ -53,8 +52,6 @@ var usersChoices = [number + lowercase + uppercase + symbols];
 
 
 console.log(usersChoices)
-
-console.log(questionBox2)
 
 console.log(included)
 
@@ -108,13 +105,12 @@ for (i = 0; i < lengthOfPassword; i++) {
 console.log(text)
 
 //Inserts text in the Element with the ID "password"
-document.getElementById("password").innerHTML = text;
+document.getElementById("password").value = text;
 }
-
-//generatePassword();
 
 //Button Generates Password- Button Identified by using ID
 const generateButton = document.getElementById("generate");
 
 //Listens for Button to Click, Runs code when Clicked
 generateButton.addEventListener("click", generatePassword);
+
